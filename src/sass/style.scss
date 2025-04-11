@@ -1,0 +1,29 @@
+@use 'libs/bootstrap-reboot.min';
+
+@use 'base/variables';
+
+@use 'blocks/promo';
+@use 'blocks/title';
+@use 'blocks/button';
+@use 'blocks/sidepanel';
+@use 'blocks/menu';
+@use 'blocks/about';
+@use 'blocks/resume';
+@use 'blocks/skills';
+@use 'blocks/portfolio';
+@use 'blocks/price';
+@use 'blocks/contacts';
+@use 'blocks/media';
+
+@use 'base/mixins';
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
