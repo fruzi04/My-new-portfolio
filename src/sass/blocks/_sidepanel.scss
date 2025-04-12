@@ -8,6 +8,9 @@
     align-items: center;
     height: 340px;
     z-index: 3;
+    background-color: #000;
+    border: #000 5px solid;
+    border-radius: 25px;
     &__divider {
       width: 2px;
       height: 70px;
@@ -23,8 +26,4 @@
             width: 150px;            
         }
     }
-}
-
-.changed-color {
-    color: #000;
 }
