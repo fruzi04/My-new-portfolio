@@ -60,6 +60,12 @@ gulp.task("images", function () {
     .pipe(browserSync.stream()); // <--- Важно!
 });
 
+gulp.task("food", function () {
+  return gulp.src("src/food/**/*")
+    .pipe(gulp.dest("dist/food"))
+    .pipe(browserSync.stream()); // <--- Важно!
+});
+
 // Запуск сервера разработки и отслеживание изменений
 gulp.task("watch", function () {
   gulp.watch("src/*.html", gulp.series("html")); // Следим за HTML
@@ -67,10 +73,10 @@ gulp.task("watch", function () {
   gulp.watch("src/js/**/*.js", gulp.series("scripts")); // Следим за JS
   gulp.watch("src/fonts/**/*", gulp.series("fonts")); // Следим за шрифтами
   gulp.watch("src/icons/**/*", gulp.series("icons")); // Следим за иконками
-  gulp.watch("src/img/**/*", gulp.series("images")); // Следим за изображениями
+  gulp.watch("src/img/**/*", gulp.series("images"));
+  gulp.watch("src/food/**/*", gulp.series("food"));
 });
 
-// Запуск сервера
 gulp.task("server", function (done) {
   browserSync.init({
     server: {
@@ -94,7 +100,8 @@ gulp.task(
       "scripts",
       "fonts",
       "icons",
-      "images"
+      "images",
+      "food"
     ),
     "server",
     "watch"
