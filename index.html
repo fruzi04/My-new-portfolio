@@ -14,7 +14,7 @@
     <div id="importedContent"></div>
     
     <script>
-        const link = documnet.querySelector('link[rel="import"]');
+        const link = document.querySelector('link[rel="import"]');
         const content = link.import.querySelector('body').innerHTML;
         document.getElementById('importedContent').innerHTML = content;
     </script>
