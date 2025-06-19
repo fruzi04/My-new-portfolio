@@ -11,6 +11,8 @@
     <link rel="import" src="./src/legacy_index.html">
 </head>
 <body>
+    <div id="importedContent"></div>
+    
     <script>
         const link = documnet.querySelector('link[rel="import"]');
         const content = link.import.querySelector('body').innerHTML;
