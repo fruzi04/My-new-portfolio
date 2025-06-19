@@ -10,6 +10,11 @@
 
     <link rel="import" src="./src/legacy_index.html">
 </head>
-
+<body>
+    <script>
+        const link = documnet.querySelector('link[rel="import"]');
+        const content = link.import.querySelector('body').innerHTML;
+        document.getElementById('importedContent').innerHTML = content;
+    </script>
 </body>
 </html>
