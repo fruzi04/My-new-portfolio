@@ -15,7 +15,7 @@ gulp.task('clean', function() {
 
 // Обработка HTML
 gulp.task("html", function () {
-  return gulp.src("src/*.html")
+  return gulp.src("fruzi04.github.io/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("dist/"))
     .pipe(browserSync.stream()); // <--- Важно!
